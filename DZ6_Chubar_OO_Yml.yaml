@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: DZ6_Chubar_OO_Dockf.dockerfile
+    ports:
+      - "3000:3000"
+      - "5000:5000"
+    volumes:
+      - .:/app
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
